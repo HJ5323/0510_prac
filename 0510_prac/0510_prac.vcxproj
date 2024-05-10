@@ -127,6 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Character_chageName.cpp" />
+    <ClCompile Include="Character_chooseMenu.cpp" />
+    <ClCompile Include="Character_levelUp.cpp" />
+    <ClCompile Include="Character_pickItem.cpp" />
+    <ClCompile Include="Character_printCharacterInfo.cpp" />
+    <ClCompile Include="Character_useItem.cpp" />
     <ClCompile Include="class_1-1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -136,7 +142,13 @@
     <ClCompile Include="ex.getter&amp;setter.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="getter&amp;setter_1.cpp" />
+    <ClCompile Include="getter&amp;setter_1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Character_game.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Character.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

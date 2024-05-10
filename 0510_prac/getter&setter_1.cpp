@@ -40,15 +40,25 @@ int main()
 	// 넓이 출력
 	cout << "넓이는: " << rect.area() << endl;
 
-	// 1~2번
-	float newW, newH;
-
 	// 객체 생성
+	float newW, newH;
 	string input;
 	cout << "가로, 세로 길이를 입력하세요. : ";
 	getline(cin, input);
 	stringstream ss(input);
 	ss >> newW >> newH;	
+
+	//string input;
+	//cout << "가로, 세로 길이를 입력하세요. : ";
+	//getline(cin, input);
+
+	//// 문자열을 ','를 기준으로 분리하여 가로와 세로 값을 얻음
+	//stringstream ss(input);
+	//string token;
+	//getline(ss, token, ',');
+	//float newW = stod(token); // 문자열을 float로 변환
+	//getline(ss, token, ',');
+	//float newH = stod(token); // 문자열을 float로 변환
 
 	// setter 함수를 이용하여 width와 height 설정
 	rect.setWidth(newW);
