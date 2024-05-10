@@ -11,35 +11,78 @@
 //4. 3.에서 보가한 변수의 area()함수 호출해서 넓이 구하기
 
 #include <iostream>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
 class Rectangle {
 private:
+	// 필드
 	float width{ 0 };
 	float height{ 0 };
 
 public:
+	// 생성자
 	Rectangle(float w, float h) : width(w), height(h) {}
 
 	// 복사 생성자
 	Rectangle(const Rectangle& other) : width(other.width), height(other.height) {}
 
+	// 넓이를 계산하는 메소드
 	float area() { return width * height; }
 };
 
 int main()
 {
 	// 1~2번
-	Rectangle rect(4, 5);
+	float w, h;
+	
+	// 객체 생성
+	string input;
+	cout << "가로, 세로 길이를 입력하세요. : ";
+	getline(cin, input);
+	stringstream ss(input);
+	ss >> w >> h;
 
-	Rectangle rect_copy1(rect); // => Rectangle rect_copy1 = rect;
+	Rectangle origin(w, h);
+	cout << "origin 넓이는 : " << origin.area() << endl;
 
-	cout << rect_copy1.area() <<endl;
+	// 복사 생성자를 이용해 다른 객체에 복사
+	Rectangle copy1(origin); // => Rectangle copy = origin;
+
+	cout << "copy 1 넓이는 : " << copy1.area() << endl;
 
 	// 3~4번
-	Rectangle rect2(2, 2);
-	rect2 = rect_copy1;
+	// 기본 생성자로 객체 생성 후 할당
+	Rectangle copy2(30, 40);
 
-	cout << rect2.area() << endl;
+	// 할당 이용하여 값 복사
+	copy2 = copy1;
+
+	cout << "copy 2 넓이는 : " << copy2.area() << endl;
+
+	return 0;
 }
+
+//// 1~2번
+//// 객체 생성
+//Rectangle origin(4, 5);
+
+//// 복사 생성자를 이용해 다른 객체에 복사
+//Rectangle copy1(origin); // => Rectangle copy = origin;
+
+//cout << "copy 1 넓이는 : " << copy1.area() << endl;
+
+//// 3~4번
+//// 기본 생성자로 객체 생성 후 할당
+//Rectangle copy2(30, 40);
+
+//// 할당 이용하여 값 복사
+//copy2 = copy1;
+
+//cout << "copy 2 넓이는 : " << copy2.area() << endl;
+
+//return 0;
+
+

@@ -21,5 +21,11 @@
     <ClCompile Include="class_1-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex.getter&amp;setter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getter&amp;setter_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

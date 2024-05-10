@@ -7,22 +7,25 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include <sstream>
 
 using namespace std;
 
 class Rectangle {
 private :
+	// 필드
 	float width{ 0 };
 	float height{ 0 };
 
 public:
+	// 생성자
 	Rectangle(float w, float h) : width(w), height(h) {}
 
+	// 넓이 계산 메소드
 	float area(){ return width * height; }
 
 };
+
 
 int main()
 {
@@ -51,17 +54,3 @@ int main()
 	
 	return 0;
 }
-Rectangle origin(10, 20); // 원래 객체 생성
-
-Rectangle copy(origin); // => Rectangle copy = origin; // 복사 생성자를 이용해 다른 객체에 복사
-
-cout << "copy 넓이는 : " << copy.area() << endl;
-
-// 3~4번
-Rectangle copy2(30, 40); // 기본 생성자를 이용하여 새로운 객체 생성
-
-copy2 = origin; // 할당 이용하여 값 복사
-
-cout << "copy 2 넓이는 : " << copy2.area() << endl;
-
-return 0;
