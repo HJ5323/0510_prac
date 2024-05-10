@@ -6,9 +6,6 @@
 //5. 객체 생성 시에 width와 height을 사용자에게 입력 받아 생성자로 넘겨주기
 
 #include <iostream>
-#include <string>
-#include <vector>
-#include <sstream>
 
 using namespace std;
 
