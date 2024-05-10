@@ -11,7 +11,6 @@
 //4. 3.에서 보가한 변수의 area()함수 호출해서 넓이 구하기
 
 #include <iostream>
-#include <string>
 #include <sstream>
 
 using namespace std;

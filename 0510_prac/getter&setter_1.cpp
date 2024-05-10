@@ -55,9 +55,9 @@ int main()
 	rect.setHeight(newH);
 
 	// 입력받은 값의 넓이와 가로 세로 길이 출력
-	std::cout << "입력 넓이: " << rect.area() << std::endl;
-	std::cout << "Width: " << rect.getWidth() << std::endl;
-	std::cout << "Height: " << rect.getHeight() << std::endl;
+	cout << "입력 넓이: " << rect.area() << endl;
+	cout << "Width: " << rect.getWidth() << endl;
+	cout << "Height: " << rect.getHeight() << endl;
 
 	return 0;
 }
