@@ -6,6 +6,9 @@
 //5. 객체 생성 시에 width와 height을 사용자에게 입력 받아 생성자로 넘겨주기
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -17,21 +20,48 @@ private :
 public:
 	Rectangle(float w, float h) : width(w), height(h) {}
 
-	int area(){ return width * height; }
+	float area(){ return width * height; }
 
 };
 
 int main()
 {
+	//float w, h;
+	//cout << "가로 길이를 입력하세요. : ";
+	//cin >> w;
+	//cout << "세로 길이를 입력하세요. : ";
+	//cin >> h;
+
+	//Rectangle rec(w, h);
+
+	//cout << "넓이는 : " << rec.area() << endl;
+
+	//return 0;
+
 	float w, h;
-	cout << "가로 길이를 입력하세요. : ";
-	cin >> w;
-	cout << "세로 길이를 입력하세요. : ";
-	cin >> h;
+
+	string input;
+	cout << "가로, 세로 길이를 입력하세요. : ";
+	getline(cin, input);
+	stringstream ss(input);
+	ss >> w >> h;
 
 	Rectangle rec(w, h);
-
 	cout << "넓이는 : " << rec.area() << endl;
-
+	
 	return 0;
 }
+Rectangle origin(10, 20); // 원래 객체 생성
+
+Rectangle copy(origin); // => Rectangle copy = origin; // 복사 생성자를 이용해 다른 객체에 복사
+
+cout << "copy 넓이는 : " << copy.area() << endl;
+
+// 3~4번
+Rectangle copy2(30, 40); // 기본 생성자를 이용하여 새로운 객체 생성
+
+copy2 = origin; // 할당 이용하여 값 복사
+
+cout << "copy 2 넓이는 : " << copy2.area() << endl;
+
+return 0;
